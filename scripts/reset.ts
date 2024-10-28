@@ -5,7 +5,7 @@ import { neon } from '@neondatabase/serverless'
 
 import * as schema from '../db/schema'
 
-const sql = neon(process.env.DATA_BASE_URL!)
+const sql = neon(process.env.DATABASE_URL!)
 const db = drizzle(sql, { schema })
 
 const main = async () => {
