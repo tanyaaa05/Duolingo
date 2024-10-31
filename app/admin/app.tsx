@@ -1,10 +1,10 @@
 "use client";
 
 import { Admin, Resource } from "react-admin";
-import simpleRestProvider from "ra-data-simple-rest";
-import { CourseList } from "./course/list";
-import { CourseCreate } from "./course/create";
-import { CourseEdit } from "./course/edit";
+import simpleResprovider from "ra-data-simple-rest";
+import { CourceList } from "./course/list";
+import { CourceCreate } from "./course/create";
+import { CourceEdit } from "./course/edit";
 
 import { UnitList } from "./unit/list";
 import { UnitCreate } from "./unit/create";
@@ -21,19 +21,17 @@ import { ChallengeEdit } from "./challenge/edit";
 import { ChallengeOptionList } from "./challengeOption/list";
 import { ChallengeOptionCreate } from "./challengeOption/create";
 import { ChallengeOptionEdit } from "./challengeOption/edit";
-import { units } from './../../db/schema';
-import { List } from './../(main)/courses/list';
 
-const dataProvider = simpleRestProvider("/api");
+const dataProvider = simpleResprovider("/api");
 
 const App = () => {
   return (
     <Admin dataProvider={dataProvider}>
       <Resource
-        name="courses"
-        list={CourseList}
-        create={CourseCreate}
-        edit={CourseEdit}
+        name="cources"
+        list={CourceList}
+        create={CourceCreate}
+        edit={CourceEdit}
         recordRepresentation="title"
       />
       <Resource
